@@ -1,103 +1,95 @@
+library work;
+use work.Gates.all;
 library ieee;
 use ieee.std_logic_1164.all;
- 
-entity alu_beh is
-	port (
-		A: in std_logic_vector(3 downto 0);
-		B: in std_logic_vector(3 downto 0);
-		sel: in std_logic_vector(1 downto 0);
-		op: out std_logic_vector(7 downto 0)
+
+entity alu is
+	port(A, B: in std_logic_vector(15 downto 0);
+			S: in std_logic_vector(2 downto 0);
+			C: out std_logic_vector(15 downto 0);
+			zero, carry: out std_logic
 	);
-end alu_beh;
- 
-architecture a1 of alu_beh is
- 
-	function sub(A: in std_logic_vector(3 downto 0); B: in std_logic_vector(3 downto 0))
-		return std_logic_vector is
-			-- declaring and initializing variables using aggregates
-			variable diff : std_logic_vector(7 downto 0):=(others =>'0');
-			variable carry: std_logic_vector(7 downto 0):=(others =>'0');
-		begin
-			-- Hint: Use for loop to calculate value of "diff" and "carry" variable
-			-- Use aggregates to assign values to multiple bits
-			for i in 0 to 3 loop
-            diff(i) := A(i) xor B(i) xor carry(i);
-				carry(i+1) := ((not A(i)) and B(i)) or ((not (A(i) xor B(i))) and carry(i));
-         end loop;
-			if carry(4) = '1' then 
-				diff(7 downto 4) := "1111";
-			else 
-				diff(7 downto 4) := "0000";
-			end if;
-			return diff;
-	end sub;
+end entity alu;
+
+architecture struct of alu is
 	
-	function shift(A: in std_logic_vector(3 downto 0); B: in std_logic_vector(3 downto 0))
-		return std_logic_vector is
-			-- declaring and initializing variables using aggregates
-			variable final_result : std_logic_vector(7 downto 0):=(others =>'0');
-			variable result : std_logic_vector(3 downto 0):=(others =>'0');
-		begin
-			result := A;
-			-- shift by 2 and shift by 1
-			if B(3) = '1' then
-				-- shifting to the right, so we use to instead of downto
-				if B(1) = '1' then
-					for i in 2 to 3 loop
-						result(i-2) := result(i);
-						result(i) := '0';
-					end loop;
-				end if;
-				
-				if B(0) = '1' then
-					for i in 1 to 3 loop
-						result(i-1) := result(i);
-						result(i) := '0';
-					end loop;
-				end if;
-			else
-				if B(1) = '1' then
-					for i in 1 downto 0 loop
-						result(i+2) := result(i);
-						result(i) := '0';
-					end loop;
-				end if;
-				
-				if B(0) = '1' then
-					for i in 2 downto 0 loop
-						result(i+1) := result(i);
-						result(i) := '0';
-					end loop;
-				end if;
-			end if;
-			
-			final_result := "0000" & result;
-			return final_result;
-	end shift;
+	component adder_subtractor is
+		port(A, B: in std_logic_vector(15 downto 0);
+				C_in: in std_logic;
+				C: out std_logic_vector(15 downto 0);
+				C_out: out std_logic
+		);
+	end component adder_subtractor;
+		
+	component AND_16 is
+	port (A, B: in std_logic_vector(15 downto 0);
+			C: out std_logic_vector(15 downto 0));
+	end component;
+	
+	component multiplier is
+		port(A, B: in std_logic_vector(15 downto 0);
+			C: out std_logic_vector(15 downto 0)
+		);
+	end component multiplier;
+	
+	component OR_16 is
+	port (A, B: in std_logic_vector(15 downto 0);
+			C: out std_logic_vector(15 downto 0));
+	end component;
+	
+	component IMPLY_16 is
+	port (A, B: in std_logic_vector(15 downto 0);
+			C: out std_logic_vector(15 downto 0));
+	end component;
+	
+	component NOT_16 is
+	port (A: in std_logic_vector(15 downto 0);
+			C: out std_logic_vector(15 downto 0));
+	end component;
+	
+	component Zero_Check is
+		port(A: in std_logic_vector(15 downto 0);
+				y : out std_logic);
+	end component Zero_Check;
+	
+	component mux_16_bit_wide_8x1 is
+		 Port ( I0, I1, I2, I3, I4, I5, I6, I7 : in STD_LOGIC_VECTOR (15 downto 0);
+				  S : in STD_LOGIC_VECTOR(2 downto 0);
+				  Y : out STD_LOGIC_VECTOR(15 downto 0));
+	end component mux_16_bit_wide_8x1;
+	
+	signal I0, I2, I3, I4, I5, I6: std_logic_vector(15 downto 0);
 	
 begin
-	alu : process(A, B, sel)
-		-- complete VHDL code for various outputs of ALU based on select lines
-		-- Hint: use if/else statement--
-		-- sub function usage :
-		-- signal_name <= sub(A,B)
-		-- variable_name := sub(A,B)
-		--
-		-- concatenate operator usage:
-		-- "0000" & A
-	begin
-		if (sel = "00") then
-			-- concatenate
-			op <= A & B;
-		elsif (sel = "01") then
-			-- subtract
-			op <= sub(A, B);
-		elsif (sel = "10") then
-			-- xor
-			op <= "0000" & (A xor B);
-		else
-			-- shift
-			op <= shift(A, B);
-		end if;
-	end process; --alu
-end a1; -- a1
+	-- 000 add
+	-- 001 sub
+	-- 010 mul
+	-- 011 and
+	-- 100 or
+	-- 101 not
+	-- 110 imp 
+	-- 111 don't care
+	
+	add1: adder_subtractor port map(A, B, S(0), I0, carry);
+	mul1: multiplier port map(A, B, I2);
+	and1: AND_16 port map(A, B, I3);
+	or1: OR_16 port map(A, B, I4);
+	not1: NOT_16 port map(A, I5);
+	imp1: IMPLY_16 port map(A, B, I6);
+	
+	check_zero: Zero_Check port map(I0, zero);
+	mux1: mux_16_bit_wide_8x1 port map(
+		I0 => I0,
+		I1 => I0,
+		I2 => I2,
+		I3 => I3,
+		I4 => I4,
+		I5 => I5,
+		I6 => I6,
+		I7 => I6,
+		S => S,
+		Y => C
+	);
+	
+	
+end struct;

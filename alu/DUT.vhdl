@@ -5,26 +5,24 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity DUT is
-    port(input_vector: in std_logic_vector(2 downto 0);
-       	output_vector: out std_logic_vector(1 downto 0));
+    port(input_vector: in std_logic_vector(10 downto 0);
+       	output_vector: out std_logic_vector(0 downto 0));
 end entity;
 
 architecture DutWrap of DUT is
-   component full_adder_3 is
-     port(a1, b1, d1: in std_logic;
-         sum, carry: out std_logic);
-   end component;
+   component eight_to_one_mux is
+	port(I: in std_logic_vector(7 downto 0);
+			S: in std_logic_vector(2 downto 0);
+			y: out std_logic);
+	end component eight_to_one_mux;
 begin
 
    -- input/output vector element ordering is critical,
    -- and must match the ordering in the trace file!
-   add_instance: full_adder_3 
+   add_instance: eight_to_one_mux
 			port map (
-					-- order of inputs B A
-					d1 => input_vector(2),
-					b1 => input_vector(1),
-					a1 => input_vector(0),
-               -- order of output OUTPUT
-					sum => output_vector(1),
-					carry => output_vector(0));
+			I => input_vector(10 downto 3),
+			S => input_vector(2 downto 0),
+			y => output_vector(0)
+			);
 end DutWrap;

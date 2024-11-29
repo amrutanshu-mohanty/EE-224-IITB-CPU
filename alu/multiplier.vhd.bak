@@ -1,0 +1,23 @@
+library work;
+use work.Gates.all;
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity multiplier is
+	port(A, B: in std_logic_vector(15 downto 0);
+			C: out std_logic_vector(15 downto 0);
+	);
+end entity multiplier;
+
+architecture struct of multiplier is
+	signal t1, t2, t3, 
+	component kogge_stone is
+    port(A, B: in std_logic_vector(15 downto 0);
+            c_in: in std_logic;
+            sum : out std_logic_vector(15 downto 0);
+            carry: out std_logic);
+	end component kogge_stone;
+	
+begin
+	
+end struct;
