@@ -1,0 +1,546 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/amrut/Downloads/cpu/kogge_stone/simulation/modelsim
+Eand_16
+Z1 w1732835381
+Z2 DPx4 work 5 gates 0 22 NcY4A7TbR^WLRT`2c:]N[1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/Users/amrut/Downloads/cpu/kogge_stone/AND_16.vhd
+Z6 FC:/Users/amrut/Downloads/cpu/kogge_stone/AND_16.vhd
+l0
+L6
+VPh67laYLI;oUkzhlCTPGN2
+!s100 7Ez?mIPhkjCbioK^joU?>0
+Z7 OV;C;10.5b;63
+31
+Z8 !s110 1732874931
+!i10b 1
+Z9 !s108 1732874931.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/amrut/Downloads/cpu/kogge_stone/AND_16.vhd|
+Z11 !s107 C:/Users/amrut/Downloads/cpu/kogge_stone/AND_16.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Astruct
+R2
+R3
+R4
+DEx4 work 6 and_16 0 22 Ph67laYLI;oUkzhlCTPGN2
+l12
+L11
+V`MDFfMBR_<Qkkm8=8l8ZC3
+!s100 9f>bIYKLaCM@;aBm0<E<a1
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eand_2
+Z14 w1659532842
+R3
+R4
+R0
+Z15 8C:/Users/amrut/Downloads/cpu/kogge_stone/Gates.vhdl
+Z16 FC:/Users/amrut/Downloads/cpu/kogge_stone/Gates.vhdl
+l0
+L57
+VW2QdRhzH^gh`1Z4bifmBf3
+!s100 <1nD4fLK5FZ?LMSb4GDe>3
+R7
+31
+R8
+!i10b 1
+Z17 !s108 1732874930.000000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/amrut/Downloads/cpu/kogge_stone/Gates.vhdl|
+Z19 !s107 C:/Users/amrut/Downloads/cpu/kogge_stone/Gates.vhdl|
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 5 and_2 0 22 W2QdRhzH^gh`1Z4bifmBf3
+l62
+L61
+VnDT8d]LGAGAW:`<`mSSSg3
+!s100 HhM:H^IAkB>a2X9?`<@_k0
+R7
+31
+R8
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R12
+R13
+Edut
+Z20 w1732868273
+R3
+R4
+R0
+Z21 8C:/Users/amrut/Downloads/cpu/kogge_stone/DUT.vhdl
+Z22 FC:/Users/amrut/Downloads/cpu/kogge_stone/DUT.vhdl
+l0
+L7
+VY[?WNW_b6d7H0nLaf`M^o3
+!s100 SNH2dY=gek3=a65dWP@9e3
+R7
+31
+R8
+!i10b 1
+R9
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/amrut/Downloads/cpu/kogge_stone/DUT.vhdl|
+Z24 !s107 C:/Users/amrut/Downloads/cpu/kogge_stone/DUT.vhdl|
+!i113 1
+R12
+R13
+Adutwrap
+R3
+R4
+DEx4 work 3 dut 0 22 Y[?WNW_b6d7H0nLaf`M^o3
+l19
+L12
+V4e0M2P_E5kE<a[UTP@<GB3
+!s100 =a]i8oz7=8SGaMzK2i6H]1
+R7
+31
+R8
+!i10b 1
+R9
+R23
+R24
+!i113 1
+R12
+R13
+Pgates
+R3
+R4
+R14
+R0
+R15
+R16
+l0
+L7
+VNcY4A7TbR^WLRT`2c:]N[1
+!s100 Dc>f1MeC:9iI_HnNzJ;KT1
+R7
+31
+R8
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R12
+R13
+Ehalf_adder
+R14
+R3
+R4
+R0
+R15
+R16
+l0
+L124
+VIZiX8mi96cJ??CnPO^U<C3
+!s100 U;nQkfQTnI7V?fejYIM<g2
+R7
+31
+R8
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 10 half_adder 0 22 IZiX8mi96cJ??CnPO^U<C3
+l129
+L128
+VCD;QIVbkQ<kd@U[I6UILl1
+!s100 E9g6H`e<YSE@nSQ7XJJ0D0
+R7
+31
+R8
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R12
+R13
+Einverter
+R14
+R3
+R4
+R0
+R15
+R16
+l0
+L45
+V^STYmNzH_F58ZVT>FF?cU2
+!s100 S3joTbdXW90XOjU4i1V^60
+R7
+31
+R8
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 8 inverter 0 22 ^STYmNzH_F58ZVT>FF?cU2
+l50
+L49
+VY38KWB:XEkc0^3YzW57dj2
+!s100 YS6CiXJRJ@EE5??nNB03h1
+R7
+31
+R8
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R12
+R13
+Ekogge_stone
+Z25 w1732874661
+Z26 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R3
+R4
+R2
+R0
+Z27 8C:/Users/amrut/Downloads/cpu/kogge_stone/kogge_stone.vhd
+Z28 FC:/Users/amrut/Downloads/cpu/kogge_stone/kogge_stone.vhd
+l0
+L7
+V0Al2Ah>AJeeoAJFENez5U2
+!s100 OLO7o3k?JjbGU;cC6E[8`3
+R7
+31
+R8
+!i10b 1
+R9
+Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/amrut/Downloads/cpu/kogge_stone/kogge_stone.vhd|
+Z30 !s107 C:/Users/amrut/Downloads/cpu/kogge_stone/kogge_stone.vhd|
+!i113 1
+R12
+R13
+Astruct
+R26
+R3
+R4
+R2
+DEx4 work 11 kogge_stone 0 22 0Al2Ah>AJeeoAJFENez5U2
+l35
+L14
+V@C4RW^M_:249ZXnTGM1bF3
+!s100 R:2g<2k]N<jNAaoB?2lBo1
+R7
+31
+R8
+!i10b 1
+R9
+R29
+R30
+!i113 1
+R12
+R13
+Enand_2
+R14
+R3
+R4
+R0
+R15
+R16
+l0
+L68
+V7Q=aZ>7Mzize[[IfQRQ;`2
+!s100 bRA[c>EJKJWNgCR8ghUC72
+R7
+31
+R8
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 6 nand_2 0 22 7Q=aZ>7Mzize[[IfQRQ;`2
+l73
+L72
+V?4CWin9:[TT0?g`jLS0E12
+!s100 I_RPhB=oe82f_Rij[[8JF2
+R7
+31
+R8
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R12
+R13
+Enor_2
+R14
+R3
+R4
+R0
+R15
+R16
+l0
+L90
+V3?]TGiHba`>]BD;kULm?^3
+!s100 edYUJ4gTm_U:i]N@4Q=Gg3
+R7
+31
+R8
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 5 nor_2 0 22 3?]TGiHba`>]BD;kULm?^3
+l95
+L94
+VNFd;eVo`>0To8@;Oh4diC1
+!s100 ESBi5;Q?X6mLo`Q3JWZ4Q0
+R7
+31
+R8
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R12
+R13
+Eor_2
+R14
+R3
+R4
+R0
+R15
+R16
+l0
+L79
+V>IC]i[S3fUX<m=i^H@9eA0
+!s100 Be23a45mg=gMiVXM<6Peg0
+R7
+31
+R8
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 4 or_2 0 22 >IC]i[S3fUX<m=i^H@9eA0
+l84
+L83
+VATF[^b3mj8cbo9?98=TRF0
+!s100 8JcIMFHmJzkaC?5jW]DnS3
+R7
+31
+R8
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R12
+R13
+Etestbench
+Z31 w1732835145
+R4
+R3
+R0
+Z32 8C:/Users/amrut/Downloads/cpu/kogge_stone/Testbench.vhdl
+Z33 FC:/Users/amrut/Downloads/cpu/kogge_stone/Testbench.vhdl
+l0
+L7
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+R7
+31
+R8
+!i10b 1
+R9
+Z34 !s90 -reportprogress|300|-93|-work|work|C:/Users/amrut/Downloads/cpu/kogge_stone/Testbench.vhdl|
+Z35 !s107 C:/Users/amrut/Downloads/cpu/kogge_stone/Testbench.vhdl|
+!i113 1
+R12
+R13
+Abehave
+R4
+R3
+DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+l69
+L9
+VoMn2BIkNA_5KA_h[NF^kL1
+!s100 a8F:X_5RjGJ>Lgj2VjQCP0
+R7
+31
+R8
+!i10b 1
+R9
+R34
+R35
+!i113 1
+R12
+R13
+Exnor_2
+R14
+R3
+R4
+R0
+R15
+R16
+l0
+L113
+VYmZa`=[Sj]6Zh9_O7]F;L0
+!s100 SMA^OIVGhoiKW^3FaJ8oW3
+R7
+31
+R8
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 6 xnor_2 0 22 YmZa`=[Sj]6Zh9_O7]F;L0
+l118
+L117
+VAJO?a^^jGBIX`G]K^jl@P2
+!s100 =aKk4IJ>H;6]KzcaGm^Mn0
+R7
+31
+R8
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R12
+R13
+Exor_16
+Z36 w1732835400
+R2
+R3
+R4
+R0
+Z37 8C:/Users/amrut/Downloads/cpu/kogge_stone/XOR_16.vhd
+Z38 FC:/Users/amrut/Downloads/cpu/kogge_stone/XOR_16.vhd
+l0
+L6
+VC`k=k;`8SM79B1lC;NNWc0
+!s100 a9SQoGE?:;ZUiVXo0W[oQ2
+R7
+31
+R8
+!i10b 1
+R9
+Z39 !s90 -reportprogress|300|-93|-work|work|C:/Users/amrut/Downloads/cpu/kogge_stone/XOR_16.vhd|
+Z40 !s107 C:/Users/amrut/Downloads/cpu/kogge_stone/XOR_16.vhd|
+!i113 1
+R12
+R13
+Astruct
+R2
+R3
+R4
+DEx4 work 6 xor_16 0 22 C`k=k;`8SM79B1lC;NNWc0
+l12
+L11
+V6GIf30jWSIMC8U2QBiN5D3
+!s100 iMfnWiQLCRQZN<QczohI`3
+R7
+31
+R8
+!i10b 1
+R9
+R39
+R40
+!i113 1
+R12
+R13
+Exor_2
+R14
+R3
+R4
+R0
+R15
+R16
+l0
+L102
+VDUd5fH`?6?dZ[>AnHc54;2
+!s100 h::V4HH0c4?lKoYnW6M?E3
+R7
+31
+R8
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 5 xor_2 0 22 DUd5fH`?6?dZ[>AnHc54;2
+l107
+L106
+VT`Lnd3[S1KOT?Q^d?zomG2
+!s100 85OK8@mo8d3=fmz<5BnRf2
+R7
+31
+R8
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R12
+R13
