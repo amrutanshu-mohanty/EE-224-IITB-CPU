@@ -1,0 +1,127 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Ze actual stuff/IITB/Sem 3/Digital Systems/Register/simulation/modelsim
+Edflip
+Z1 w1732893566
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8C:/Ze actual stuff/IITB/Sem 3/Digital Systems/Register/dflip.vhd
+Z5 FC:/Ze actual stuff/IITB/Sem 3/Digital Systems/Register/dflip.vhd
+l0
+L4
+V6K8feKHBj:YFZ0dCln][31
+!s100 aL>UlTU9nh_4WECQ2?Hbf0
+Z6 OV;C;10.5b;63
+31
+Z7 !s110 1732893911
+!i10b 1
+Z8 !s108 1732893911.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Ze actual stuff/IITB/Sem 3/Digital Systems/Register/dflip.vhd|
+Z10 !s107 C:/Ze actual stuff/IITB/Sem 3/Digital Systems/Register/dflip.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Astruct
+R2
+R3
+DEx4 work 5 dflip 0 22 6K8feKHBj:YFZ0dCln][31
+l13
+L10
+VRbj:M1a19l2USO:bg7[eK0
+!s100 VDHL8`Xk4kn0eZjX1neLz1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eregister_16bit
+Z13 w1732893820
+R2
+R3
+R0
+Z14 8C:/Ze actual stuff/IITB/Sem 3/Digital Systems/Register/register_16bit.vhd
+Z15 FC:/Ze actual stuff/IITB/Sem 3/Digital Systems/Register/register_16bit.vhd
+l0
+L4
+VAJG>84dNAVJ333dgH>deG3
+!s100 j_KaWkL[<H]dUJFT`CX=<2
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|C:/Ze actual stuff/IITB/Sem 3/Digital Systems/Register/register_16bit.vhd|
+Z17 !s107 C:/Ze actual stuff/IITB/Sem 3/Digital Systems/Register/register_16bit.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 14 register_16bit 0 22 AJG>84dNAVJ333dgH>deG3
+l17
+L10
+Vl`fY3VG;N[dnSP5ZigQVP2
+!s100 Hb2JZ=>ICFk5AZR>IhS;`2
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Etestbench
+Z18 w1732893874
+R2
+R3
+R0
+Z19 8C:/Ze actual stuff/IITB/Sem 3/Digital Systems/Register/Testbench.vhdl
+Z20 FC:/Ze actual stuff/IITB/Sem 3/Digital Systems/Register/Testbench.vhdl
+l0
+L4
+VL7N=bE4@XE?;`aNNSzSTL0
+!s100 =K:1DH_7Ch>TaEjF^>Un_3
+R6
+31
+R7
+!i10b 1
+R8
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/Ze actual stuff/IITB/Sem 3/Digital Systems/Register/Testbench.vhdl|
+Z22 !s107 C:/Ze actual stuff/IITB/Sem 3/Digital Systems/Register/Testbench.vhdl|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+DEx4 work 9 testbench 0 22 L7N=bE4@XE?;`aNNSzSTL0
+l17
+L7
+VlgNZ;f=A:Y2TLnl?>FfQL1
+!s100 =_Yjd;R@emRkA?^I3[eQ`3
+R6
+31
+R7
+!i10b 1
+R8
+R21
+R22
+!i113 1
+R11
+R12
