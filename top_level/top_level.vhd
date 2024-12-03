@@ -36,7 +36,7 @@ architecture struct of top_level is
 			ALU_instr: out std_logic_vector(2 downto 0); 
 			PC_en, Mem_read, Mem_write, IR_en, T1_en, T2_en, T3_en, RF_en: out std_logic
 		);
-	end fsm;
+	end component fsm;
 	
 	component register_16bit is
 		port (p_in: in std_logic_vector(15 downto 0);
@@ -68,7 +68,7 @@ architecture struct of top_level is
 			  Mem_D_in  : in  std_logic_vector(15 downto 0);
 			  Mem_D_out : out std_logic_vector(15 downto 0)
 		 );
-	end memory;
+	end component memory;
 	
 	------------------------------------------------------------
 	------------------------------------------------------------
