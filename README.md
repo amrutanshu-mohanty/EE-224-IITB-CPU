@@ -14,21 +14,16 @@ Arjoe Basak 23B1295*
  - Our CPU is a finite state machine with 22 different states. Each
  instruction has been broken down into 2-3 states, based on the tasks
  being performed.
- - Appropriate state tables are made, which has the tasks to be per
-formed when in a state. A circuit has also been designed for each
+ - Appropriate state tables are made, which have the tasks to be performed when in a state. A circuit has also been designed for each
  instruction, based on the components used in the states.
- - Finally, a top-level circuit has been designed, which incorporates sev
-eral multiplexers that are used to control the inputs fed into compo
-nents. Their select lines controlled by outputs of the FSM.
+ - Finally, a top-level circuit has been designed, which incorporates several multiplexers that are used to control the inputs fed into components. Their select lines are controlled by outputs of the FSM.
  - All components have been designed structurally in VHDL, from
  using logic gates for the 16-bit Kogge-Stone adder to using D-flipflops
  for every register. Only the final FSM uses behavioural architecture.
  - In order to verify our handiwork, the code in VHDL is supported by
  a comprehensive Testbench, to simulate the instructions.
  - For the ease of loading various instructions into the CPU, a python
- script has been created which takes in assembly line inputs and gen
-erates a text file which is then read by the VHDL code for the memory.
- - A synchronous reset signal has been implemented, that sets the
- FSM to a default state while resetting the program counter, tem
-poarary registers and register file too.
+ script has been created which takes in assembly line inputs and generates a text file which is then read by the VHDL code for the memory.
+ - A synchronous reset signal has been implemented that sets the
+ FSM to a default state while resetting the program counter, temporary registers and register file too.
 
